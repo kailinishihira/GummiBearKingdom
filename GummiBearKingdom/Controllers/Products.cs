@@ -33,6 +33,20 @@ namespace GummiBearKingdom.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult AddProduct(int countryId)
+        {
+            ViewBag.CountryId = db.Countries.FirstOrDefault(product => product.CountryId == countryId);
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddProduct(Product product)
+        {
+            db.Products.Add(product);
+            db.SaveChanges();
+            return RedirectToAction("Details", "Countries", new { countryId = product.CountryId });
+        }
+
         public IActionResult Details(int productId)
         {
             var thisProduct = db.Products.Include(product => product.Country)

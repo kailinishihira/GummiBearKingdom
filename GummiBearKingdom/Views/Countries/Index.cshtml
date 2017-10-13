@@ -5,13 +5,13 @@
 }
 
 <h1>Countries of Origin</h1>
-<p>@Html.ActionLink("Add", "Create")</p>
+<p>@Html.ActionLink("Add New Country", "Create")</p>
 
 <div class="card">
     <div class="card-block">
         @foreach(var country in Model)
         {
-            <p>@Html.DisplayFor(model => country.Name, new{@class="card-text"})</p>
+            <p class="card-text">@Html.ActionLink((string)country.Name, "Details", new{ countryId = country.CountryId})</p>
         }
     </div>
 </div>	

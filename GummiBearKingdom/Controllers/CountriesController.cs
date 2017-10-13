@@ -16,7 +16,7 @@ namespace GummiBearKingdom.Controllers
             var CountryList = db.Countries.OrderBy((x => x.Name)).ToList();
             return View(CountryList);
         }
-  
+
         public IActionResult Create()
         {
             return View();
@@ -36,6 +36,37 @@ namespace GummiBearKingdom.Controllers
                                 .FirstOrDefault(country => country.CountryId == countryId);
             return View(thisCountry);
         }
+
+        public IActionResult Edit(int countryId)
+        {
+            var thisCountry = db.Countries.FirstOrDefault(country => country.CountryId == countryId);
+            return View(thisCountry);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Country country)
+        {
+            db.Entry(country).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Details", new { countryId = country.CountryId });
+        }
+
+        public IActionResult Delete(int countryId)
+        {
+            var thisCountry = db.Countries.FirstOrDefault(country => country.CountryId == countryId);
+            return View(thisCountry);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmation(int countryId)
+        {
+            var thisCountry = db.Countries
+                                .FirstOrDefault(country => country.CountryId == countryId);
+            db.Countries.Remove(thisCountry);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
     }
 }

@@ -3,3 +3,22 @@
 @{
     ViewData["Title"] = "Edit Country";
 }
+
+<h1>Edit Country of Origin</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="card">
+        <div class="card-block">
+            <div class="form-group row">
+                <label class="col-md-2">Country of Origin:</label>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Name, new {@class="form-control"})
+                </div>
+            </div>
+            <input type="submit" value="Update" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<p class="back">@Html.ActionLink("Back to Details", "Details", new{ countryId = Model.CountryId })</p>

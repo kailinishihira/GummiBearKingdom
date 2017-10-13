@@ -3,3 +3,17 @@
 @{
     ViewData["Title"] = "Delete Country";
 }
+
+<h1>Delete Country</h1>
+<p>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</p>
+
+<p class="back">@Html.ActionLink("Back to Details", "Details", new{ countryId = Model.CountryId})</p>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.CountryId)
+    <div class="d-flex justify-content-center">
+        <input type="submit" value="Delete" class="btn btn-default" />
+    </div>
+
+}
