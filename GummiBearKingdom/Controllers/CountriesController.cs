@@ -13,10 +13,29 @@ namespace GummiBearKingdom.Controllers
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
         public IActionResult Index()
         {
-            var CountryList = db.Countries.OrderBy((x => x.Name)).ToList();      
+            var CountryList = db.Countries.OrderBy((x => x.Name)).ToList();
             return View(CountryList);
         }
+  
+        public IActionResult Create()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult Create(Country country)
+        {
+            db.Countries.Add(country);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Details(int countryId)
+        {
+            var thisCountry = db.Countries.Include(country => country.Products)
+                                .FirstOrDefault(country => country.CountryId == countryId);
+            return View(thisCountry);
+        }
 
     }
 }

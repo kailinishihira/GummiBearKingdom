@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GummiBearKingdom.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+<p>@Html.ActionLink("Add", "Create")</p>
+
+<div class="card-deck">
+    @foreach(var product in Model)
+	{
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">@Html.ActionLink((string)product.Name, "Details", new{ productId = product.ProductId })</h4>
+			    <p>Made in @Html.DisplayFor(model => product.Country.Name)</p>
+		    </div>
+	    </div>
+	}
+
+</div>

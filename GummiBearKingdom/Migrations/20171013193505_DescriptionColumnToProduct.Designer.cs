@@ -8,9 +8,10 @@ using GummiBearKingdom.Models;
 namespace GummiBearKingdom.Migrations
 {
     [DbContext(typeof(GummiBearKingdomContext))]
-    partial class GummiBearKingdomContextModelSnapshot : ModelSnapshot
+    [Migration("20171013193505_DescriptionColumnToProduct")]
+    partial class DescriptionColumnToProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2");
@@ -32,7 +33,7 @@ namespace GummiBearKingdom.Migrations
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<double>("Cost");
+                    b.Property<int>("Cost");
 
                     b.Property<int>("CountryId");
 

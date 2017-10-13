@@ -1,0 +1,45 @@
+﻿@model GummiBearKingdom.Models.Product
+
+@{
+    ViewData["Title"] = "Add New Product";
+}
+
+<h1>Add New Product</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="card">
+        <div class="card-block">
+            <div class="form-group row">
+                <label class="col-md-3">Product @Html.DisplayNameFor(model => model.Name):</label>
+                <div class="col-md-9">
+                    @Html.TextBoxFor(model => model.Name, new {@class="form-control"})
+                </div>
+            </div>
+		
+		    <div class="form-group row">
+                <label class="col-md-3">Product @Html.DisplayNameFor(model => model.Description):</label>
+                <div class="col-md-9">
+                    @Html.TextAreaFor(model => model.Description, new {rows="10", cols="95"})
+                </div>
+            </div>
+		
+			<div class="form-group row">
+                <label class="col-md-3">Product @Html.DisplayNameFor(model => model.Cost): $</label>
+                <div class="col-md-9">
+                    @Html.TextBoxFor(model => model.Cost, new {@class="form-control"})
+                </div>
+            </div>
+		
+		    <div class="form-group row">
+                <label class="col-md-3">Country of Origin:</label>
+                <div class="col-md-9">
+                    @Html.DropDownList("CountryId")
+                </div>
+            </div>
+		
+            <input type="submit" value="Add" class="btn btn-default" />
+        </div>
+    </div>
+
+}
