@@ -8,7 +8,8 @@
 ## Description
 
 _The user may create, read, update and delete products and the product's country of origin._
-_Styling inspired by [Sugarfina](https://www.sugarfina.com/)_
+
+_Styling inspired by [Sugarfina](https://www.sugarfina.com/)._
 
 ## Setup/Installation Requirements
 

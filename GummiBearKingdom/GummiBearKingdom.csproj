@@ -28,4 +28,13 @@
 
 	
 
+  <ItemGroup>
+    <Compile Remove="Migrations\20171013182339_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20171013182339_Initial.cs" />
+    <Compile Remove="Migrations\20171013193505_DescriptionColumnToProduct.Designer.cs" />
+    <Compile Remove="Migrations\20171013193505_DescriptionColumnToProduct.cs" />
+    <Compile Remove="Migrations\20171013195303_DoubleToCost.Designer.cs" />
+    <Compile Remove="Migrations\20171013195303_DoubleToCost.cs" />
+    <Compile Remove="Migrations\GummiBearKingdomContextModelSnapshot.cs" />
+  </ItemGroup>
 </Project>

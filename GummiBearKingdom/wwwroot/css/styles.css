@@ -1,7 +1,68 @@
 ﻿body {
-
+    
 }
 
+.navbar {
+    background-color: #A0D5E4;
+ 
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+hr {
+    border: solid 0.5px #86CBDD;
+}
+
+#home-banner {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-image: url("https://www.sugarfina.com/wp-content/uploads/2015/07/about_title.jpg");
+    background-size: cover;
+    border: solid 0.5px #86CBDD;
+}
+
+#home-title {
+    font-size: 60px;
+    letter-spacing: 6px;
+    color: #86CBDD;
+}
+
+
+
 h1 {
+    font-size: 60px;
+    letter-spacing: 3px;
     text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #86CBDD;
+}
+
+.countries {
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+#countries-list {
+    color: #000000;
+}
+
+#countries-list:hover {
+    color: #86CBDD;
+    text-decoration: none;
+}
+
+.country-card {
+    border: solid 0.5px #86CBDD;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
