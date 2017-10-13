@@ -1,7 +1,12 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GummiBearKingdom", "GummiBearKingdom\GummiBearKingdom.csproj", "{03D0846D-B868-4B0C-B6E8-AC4BBDFDF0EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GummiBearKingdom", "GummiBearKingdom\GummiBearKingdom.csproj", "{A951118F-35B0-4F0B-BCD4-C8F4C5DE2077}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7F7F379-2A8E-4A0B-AB36-6F07ACEADD9C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +14,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{03D0846D-B868-4B0C-B6E8-AC4BBDFDF0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03D0846D-B868-4B0C-B6E8-AC4BBDFDF0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03D0846D-B868-4B0C-B6E8-AC4BBDFDF0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03D0846D-B868-4B0C-B6E8-AC4BBDFDF0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A951118F-35B0-4F0B-BCD4-C8F4C5DE2077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A951118F-35B0-4F0B-BCD4-C8F4C5DE2077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A951118F-35B0-4F0B-BCD4-C8F4C5DE2077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A951118F-35B0-4F0B-BCD4-C8F4C5DE2077}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
