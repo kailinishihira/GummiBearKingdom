@@ -1,0 +1,16 @@
+﻿@model IEnumerable<GummiBearKingdom.Models.Country>
+
+@{
+    ViewData["Title"] = "Countries";
+}
+
+<h1>Countries of Origin</h1>
+
+<div class="card">
+    <div class="card-block">
+        @foreach(var country in Model)
+        {
+            <p>@Html.DisplayFor(model => country.Name, new{@class="card-text"})</p>
+        }
+    </div>
+</div>	
