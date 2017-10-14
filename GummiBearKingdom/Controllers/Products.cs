@@ -14,7 +14,8 @@ namespace GummiBearKingdom.Controllers
         private GummiBearKingdomContext db = new GummiBearKingdomContext();
         public IActionResult Index()
         {
-            var productsList = db.Products.Include(product => product.Country).ToList();
+            var productsList = db.Products.OrderBy((x => x.Name))
+                                 .Include(product => product.Country).ToList();
             ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
             return View(productsList);
         }

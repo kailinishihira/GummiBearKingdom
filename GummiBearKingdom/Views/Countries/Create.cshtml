@@ -4,11 +4,13 @@
     ViewData["Title"] = "Add Country of Origin";
 }
 
-<h1>Add a New Country of Origin</h1>
+<div class="add-country-banner">
+    <h1 id="add-country-title">ADD A COUNTRY OF ORIGIN</h1>
+</div>
 
 @using (Html.BeginForm())
 {
-    <div class="card">
+    <div class="card add-country-card">
         <div class="card-block">
             <div class="form-group row">
                 <label class="col-md-2">Country of Origin:</label>

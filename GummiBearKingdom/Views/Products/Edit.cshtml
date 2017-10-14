@@ -4,14 +4,17 @@
     ViewData["Title"] = "Edit Product";
 }
 
-<h1>Edit @Html.DisplayFor(model => model.Name)</h1>
+<div class="edit-banner">
+    <h1 class="edit-title">EDIT @Html.DisplayFor(model => model.Name)</h1>
+</div> 
+
 <p class="back">@Html.ActionLink("Back", "Details", new{productId = Model.ProductId})</p>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.ProductId)
 
-    <div class="card">
+    <div class="card edit-card">
         <div class="card-block">
 		
             <div class="form-group row">

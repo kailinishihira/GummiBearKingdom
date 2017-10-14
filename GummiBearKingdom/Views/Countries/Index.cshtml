@@ -4,9 +4,11 @@
     ViewData["Title"] = "Countries";
 }
 
-<h1>Countries of Origin</h1>
+<div id="countries-banner">
+    <h1 id="countries-title">COUNTRIES OF ORIGIN</h1>
+</div>
 
-<p>@Html.ActionLink("Add New Country", "Create")</p>
+
 
 <div class="card country-card">
     <div class="card-block">
@@ -14,5 +16,6 @@
         {
             <p class="card-text countries">@Html.ActionLink((string)country.Name, "Details", new{ countryId = country.CountryId}, new{ @id="countries-list"})</p>
         }
+		<p class="add-country">@Html.ActionLink("Add New Country", "Create", new{ @id="add-country-link" })</p>
     </div>
 </div>	

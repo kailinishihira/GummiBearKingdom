@@ -30,39 +30,153 @@ hr {
 #home-title {
     font-size: 60px;
     letter-spacing: 6px;
-    color: #86CBDD;
-}
-
-
-
-h1 {
-    font-size: 60px;
-    letter-spacing: 3px;
+    color: #000000;
     text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    color: #86CBDD;
 }
 
-.countries {
+#countries-banner, #products-banner {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-image: url("https://www.sugarfina.com/wp-content/uploads/2015/07/about_title.jpg");
+    background-size: cover;
+    border: solid 0.5px #86CBDD;
+}
+
+#countries-title, #products-title {
+    color: #000000;
+    text-align: center;
+}
+
+.countries, .country-products {
     font-size: 30px;
     text-align: center;
     color: #000000;
 }
 
-#countries-list {
+#countries-list, #country-detail-list {
     color: #000000;
 }
 
-#countries-list:hover {
+#countries-list:hover, #country-detail-list:hover {
     color: #86CBDD;
     text-decoration: none;
 }
 
-.country-card {
+.country-card, .country-detail-card, .add-country-card, .edit-card {
     border: solid 0.5px #86CBDD;
     padding-top: 4%;
     padding-bottom: 4%;
+    margin: 5% 20% 5% 20%;
+}
+
+.product-details-card {
+    border: solid 0.5px #86CBDD;
+    margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+.product-details-header, .product-details-footer {
+    background-color: #86CBDD;
+    color: #ffffff;
+}
+
+.add-country {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#add-country-link {
+    color: #000000;
+}
+
+#add-country-link:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.crud {
+    text-align: center;
+}
+
+.back {
+    text-align: center;
+}
+
+#add-country-title { 
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#country-detail-banner, .add-product-banner, .add-country-banner, .edit-banner, .delete-banner {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    border: solid 0.5px #86CBDD;
+}
+
+#country-detail-title, .add-product-title, .add-country-title, .edit-title, .delete-title {
+    color: #000000;
+    text-align: center;
+}
+
+#sweet-photo {
+    width: 25%;
+}
+
+.photo {
+    text-align: center;
+}
+
+#product-details-banner {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-image: url("https://www.sugarfina.com/wp-content/uploads/2015/07/about_title.jpg");
+    background-size: cover;
+    border: solid 0.5px #86CBDD;
+    text-align: center;
+}
+
+.add-product-link {
+    text-align: center;
+}
+
+.add-product-card {
+    margin: 4% 20% 4% 20%;
+    border: solid 0.5px #86CBDD;
+    padding: 2%;
+}
+
+.products-list {
+    border: solid 0.5px #86CBDD;
+    margin: 3% 20% 3% 20%;
+}
+
+.btn {
+    color: #ffffff;
+    background-color: #86CBDD;
+}
+
+.btn:hover {
+    color: #86CBDD;
+    background-color: #ffffff;
+    border: solid 0.5px #86CBDD;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#gummies-photo {
+    width: 40%;
+    padding-right: 1%;
+    float: right;
+}
+
+.about-card {
+    border: solid 0.5px #86CBDD;
+    padding: 3% 2% 3% 2%;
+    margin: 5% 20% 5% 20%;
 }

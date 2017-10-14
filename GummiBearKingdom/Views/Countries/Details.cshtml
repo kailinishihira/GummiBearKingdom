@@ -3,18 +3,19 @@
 @{
     ViewData["Title"] = "Country Details";
 }
+<div id="country-detail-banner">
+    <h1 id="country-detail-title">Products Made in @Html.DisplayFor(model => model.Name)</h1>
+</div>
 
-<h1>Products Made in @Html.DisplayFor(model => model.Name)</h1>
-<p>@Html.ActionLink("Edit Country Name", "Edit", new{ countryId = Model.CountryId })</p>
-<p>@Html.ActionLink("Delete Country", "Delete", new{ countryId = Model.CountryId })</p>
-<p>@Html.ActionLink("Add New Product to " + (string)Model.Name, "AddProduct", "Products", new { countryId = Model.CountryId })</p>
+<p class="crud">@Html.ActionLink("Edit", "Edit", new{ countryId = Model.CountryId }) | @Html.ActionLink("Delete", "Delete", new{ countryId = Model.CountryId }) | @Html.ActionLink("Add", "AddProduct", "Products", new { countryId = Model.CountryId })</p>
 <p class="back">@Html.ActionLink("Back to Countries List", "Index")</p>
 
-<div class="card">
+<div class="card country-detail-card">
     <div class="card-block">
         @foreach(var product in Model.Products)
         {
-            <p class="card-text">@Html.ActionLink((string)product.Name, "Details", "Products", new{ productId = product.ProductId })</p>
+            <p class="card-text country-products">@Html.ActionLink((string)product.Name, "Details", "Products", new{ productId = product.ProductId }, new { @id="country-detail-list"})</p>
         }
     </div>
 </div>  
+

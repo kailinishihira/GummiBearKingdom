@@ -3,9 +3,11 @@
 @{
     ViewData["Title"] = "Delete Country";
 }
+<div class="delete-banner">
+    <h1 class="delete-title">DELETE COUNTRY</h1>
+</div>
 
-<h1>Delete Country</h1>
-<p>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</p>
+<h4>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</h4>
 
 <p class="back">@Html.ActionLink("Back to Details", "Details", new{ countryId = Model.CountryId})</p>
 

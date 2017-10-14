@@ -4,13 +4,26 @@
     ViewData["Title"] = "Product Details";
 }
 
-<h1>Product Details</h1>
-<p>@Html.ActionLink("Back", "Index")</p>
-<p>@Html.ActionLink("Edit", "Edit", new{ productId = Model.ProductId })</p>
-<p>@Html.ActionLink("Delete", "Delete", new{ productId = Model.ProductId })</p>
+
+<div id="product-details-banner">
+    <img id="sweet-photo" src="https://blog-fnbvai4ixvsy4.netdna-ssl.com/app/uploads/2017/08/Logo@3x.png">
+</div>
+
+<p class="crud">@Html.ActionLink("Back", "Index") | @Html.ActionLink("Edit", "Edit", new{ productId = Model.ProductId }) | @Html.ActionLink("Delete", "Delete", new{ productId = Model.ProductId })</p>
+
+<div class="card text-center product-details-card">
+  <div class="card-header product-details-header">
+	<p>Made in @Html.ActionLink((string)Model.Country.Name, "Details", "Countries", new{ countryId = Model.CountryId })</p>
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">@Html.DisplayFor(model => model.Name)</h4>
+    <p class="card-text">@Html.DisplayFor(model => model.Description)</p>
+  </div>
+  <div class="card-footer product-details-footer">
+    <p>$ @Html.DisplayFor(model => model.Cost)</p>
+  </div>
+</div>   
 
 
-<p>@Html.DisplayFor(model => model.Name)</p>
-<p>$ @Html.DisplayFor(model => model.Cost)</p>
-<p>Made in @Html.DisplayFor(model => model.Country.Name)</p>
-<p>@Html.DisplayFor(model => model.Description)</p>
+
+

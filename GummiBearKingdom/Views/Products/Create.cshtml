@@ -4,11 +4,13 @@
     ViewData["Title"] = "Add New Product";
 }
 
-<h1>Add New Product</h1>
+<div class="add-product-banner">
+    <h1 class="add-product-title">ADD NEW PRODUCT</h1>
+</div>
 
 @using (Html.BeginForm())
 {
-    <div class="card">
+    <div class="card add-product-card">
         <div class="card-block">
             <div class="form-group row">
                 <label class="col-md-3">Product @Html.DisplayNameFor(model => model.Name):</label>
