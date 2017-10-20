@@ -25,8 +25,10 @@ namespace GummiBearKingdom.Controllers
         [HttpPost]
         public IActionResult Create(Country country)
         {
-            db.Countries.Add(country);
-            db.SaveChanges();
+            if(ModelState.IsValid){
+				db.Countries.Add(country);
+				db.SaveChanges(); 
+            }
             return RedirectToAction("Index");
         }
 

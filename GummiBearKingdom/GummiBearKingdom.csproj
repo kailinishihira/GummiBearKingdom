@@ -36,5 +36,13 @@
     <Compile Remove="Migrations\20171013195303_DoubleToCost.Designer.cs" />
     <Compile Remove="Migrations\20171013195303_DoubleToCost.cs" />
     <Compile Remove="Migrations\GummiBearKingdomContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20171013223946_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20171013223946_Initial.cs" />
+    <Compile Remove="Migrations\20171019181613_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20171019181613_Initial.cs" />
+    <Compile Remove="Migrations\20171019184410_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20171019184410_Initial.cs" />
+    <Compile Remove="Migrations\20171020002906_AddRequiredAttribute.Designer.cs" />
+    <Compile Remove="Migrations\20171020002906_AddRequiredAttribute.cs" />
   </ItemGroup>
 </Project>

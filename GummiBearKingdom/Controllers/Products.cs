@@ -29,8 +29,11 @@ namespace GummiBearKingdom.Controllers
         [HttpPost]
         public IActionResult Create(Product product)
         {
-            db.Products.Add(product);
-            db.SaveChanges();
+            if (ModelState.IsValid){
+				db.Products.Add(product);
+				db.SaveChanges();
+            }
+
             return RedirectToAction("Index");
         }
 

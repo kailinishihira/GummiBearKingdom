@@ -8,9 +8,10 @@ using GummiBearKingdom.Models;
 namespace GummiBearKingdom.Migrations
 {
     [DbContext(typeof(GummiBearKingdomContext))]
-    partial class GummiBearKingdomContextModelSnapshot : ModelSnapshot
+    [Migration("20171019181613_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2");
@@ -20,8 +21,7 @@ namespace GummiBearKingdom.Migrations
                     b.Property<int>("CountryId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name")
-                        .IsRequired();
+                    b.Property<string>("Name");
 
                     b.HasKey("CountryId");
 
@@ -33,16 +33,13 @@ namespace GummiBearKingdom.Migrations
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Cost")
-                        .IsRequired();
+                    b.Property<string>("Cost");
 
                     b.Property<int>("CountryId");
 
-                    b.Property<string>("Description")
-                        .IsRequired();
+                    b.Property<string>("Description");
 
-                    b.Property<string>("Name")
-                        .IsRequired();
+                    b.Property<string>("Name");
 
                     b.HasKey("ProductId");
 
