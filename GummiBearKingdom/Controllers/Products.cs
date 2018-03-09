@@ -22,7 +22,7 @@ namespace GummiBearKingdom.Controllers
 
         public IActionResult Create()
         {
-            ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
+            ViewBag.ListOfCountries = new SelectList(db.Countries, "CountryId", "Name");
             return View();
         }
 
@@ -62,7 +62,7 @@ namespace GummiBearKingdom.Controllers
         {
             var thisProduct = db.Products.Include(product => product.Country)
                                 .FirstOrDefault(product => product.ProductId == productId);
-            ViewBag.CountryId = new SelectList(db.Countries, "CountryId", "Name");
+            ViewBag.ListOfCountries = new SelectList(db.Countries, "CountryId", "Name");
             return View(thisProduct);
         }
 

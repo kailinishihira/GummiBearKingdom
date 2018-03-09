@@ -4,8 +4,8 @@
     ViewData["Title"] = "Add New Product";
 }
 
-<div class="add-product-banner">
-    <h1 class="add-product-title">ADD NEW PRODUCT</h1>
+<div class="banner">
+    <h1 class="title">ADD NEW PRODUCT</h1>
 </div>
 
 @using (Html.BeginForm())
@@ -23,7 +23,7 @@
             <div class="form-group row">
                 <label class="col-md-3">Product @Html.DisplayNameFor(model => model.Description):</label>
                 <div class="col-md-9">
-                    @Html.TextAreaFor(model => model.Description, new {rows="10", cols="95"})
+                    @Html.TextAreaFor(model => model.Description, new {rows="10", @class = "form-control"})
                 </div>
             </div>
         

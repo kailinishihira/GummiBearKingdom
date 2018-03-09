@@ -4,18 +4,26 @@
     ViewData["Title"] = "Countries";
 }
 
-<div id="countries-banner">
-    <h1 id="countries-title">COUNTRIES OF ORIGIN</h1>
+<div class="banner">
+    <h1 class="title">COUNTRIES OF ORIGIN</h1>
+</div>
+
+<p class="add-country">@Html.ActionLink("Add New Country", "Create", new { @id = "add-country-link" })</p>
+
+<div class="list-area">
+    <div class="card-columns">
+
+        @foreach (var country in Model)
+        {
+            <div class="card list-card">
+                <div class="card-body list">
+                    <h5 class="card-title">@Html.ActionLink((string)country.Name, "Details", new { countryId = country.CountryId }, new { @class = "list-names" })</h5>
+                </div>
+            </div>
+        }
+
+    </div>
 </div>
 
 
-
-<div class="card country-card">
-    <div class="card-block">
-        @foreach(var country in Model)
-        {
-            <p class="card-text countries">@Html.ActionLink((string)country.Name, "Details", new{ countryId = country.CountryId}, new{ @id="countries-list"})</p>
-        }
-		<p class="add-country">@Html.ActionLink("Add New Country", "Create", new{ @id="add-country-link" })</p>
-    </div>
-</div>	
+	

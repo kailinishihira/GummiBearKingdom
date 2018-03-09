@@ -4,8 +4,8 @@
     ViewData["Title"] = "Edit Country";
 }
 
-<div class="edit-banner">
-    <h1 class="edit-title">Edit Country of Origin</h1>
+<div class="banner">
+    <h1 class="title">Edit Country of Origin</h1>
 </div>
 
 @using (Html.BeginForm())
@@ -18,7 +18,7 @@
                     @Html.TextBoxFor(model => model.Name, new {@class="form-control"})
                 </div>
             </div>
-            <input type="submit" value="Update" class="btn btn-default" />
+            <input type="submit" value="Save" class="btn btn-default" />
         </div>
     </div>
 }

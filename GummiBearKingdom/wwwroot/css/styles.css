@@ -3,8 +3,7 @@
 }
 
 .navbar {
-    background-color: #A0D5E4;
- 
+    background-color: #6ad1e3;
 }
 
 .navbar-brand {
@@ -16,68 +15,73 @@
 }
 
 hr {
-    border: solid 0.5px #86CBDD;
+    border: solid 0.5px #6ad1e3;
 }
 
-#home-banner {
+.banner {
     padding-top: 6%;
     padding-bottom: 6%;
-    background-image: url("https://www.sugarfina.com/wp-content/uploads/2015/07/about_title.jpg");
+    color: #6ad1e3;
+    background-image: url("https://images.milled.com/2017-04-28/mN_riAetyyFmh5mk/Ia7BL-_yXOSC.jpg");
     background-size: cover;
-    border: solid 0.5px #86CBDD;
+    border: solid 0.5px #6ad1e3;
+    text-align: center;
 }
 
-#home-title {
+.title {
     font-size: 60px;
     letter-spacing: 6px;
-    color: #000000;
-    text-align: center;
+    color: #6ad1e3;
 }
 
-#countries-banner, #products-banner {
-    padding-top: 6%;
-    padding-bottom: 6%;
-    background-image: url("https://www.sugarfina.com/wp-content/uploads/2015/07/about_title.jpg");
-    background-size: cover;
-    border: solid 0.5px #86CBDD;
-}
 
-#countries-title, #products-title {
-    color: #000000;
-    text-align: center;
-}
-
-.countries, .country-products {
+.countries {
     font-size: 30px;
     text-align: center;
     color: #000000;
 }
 
-#countries-list, #country-detail-list {
+.list-card {
+    border: solid 0.5px #6ad1e3;
+}
+
+.list-area {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.list {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.list-names {
     color: #000000;
+    letter-spacing: 2px;
 }
 
-#countries-list:hover, #country-detail-list:hover {
-    color: #86CBDD;
-    text-decoration: none;
-}
+    .list-names:hover {
+        color: #6ad1e3;
+        text-decoration: none;
+    }
 
-.country-card, .country-detail-card, .add-country-card, .edit-card {
-    border: solid 0.5px #86CBDD;
+.country-detail-card, .add-country-card, .edit-card {
+    border: solid 0.5px #6ad1e3;
     padding-top: 4%;
     padding-bottom: 4%;
     margin: 5% 20% 5% 20%;
 }
 
 .product-details-card {
-    border: solid 0.5px #86CBDD;
+    border: solid 0.5px #6ad1e3;
     margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
 }
 
 .product-details-header, .product-details-footer {
-    background-color: #86CBDD;
+    background-color: #6ad1e3;
     color: #ffffff;
 }
 
@@ -103,37 +107,12 @@ hr {
     text-align: center;
 }
 
-#add-country-title { 
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-#country-detail-banner, .add-product-banner, .add-country-banner, .edit-banner, .delete-banner {
-    padding-top: 6%;
-    padding-bottom: 6%;
-    border: solid 0.5px #86CBDD;
-}
-
-#country-detail-title, .add-product-title, .add-country-title, .edit-title, .delete-title {
-    color: #000000;
-    text-align: center;
-}
-
 #sweet-photo {
     width: 25%;
+    text-align: center;
 }
 
 .photo {
-    text-align: center;
-}
-
-#product-details-banner {
-    padding-top: 6%;
-    padding-bottom: 6%;
-    background-image: url("https://www.sugarfina.com/wp-content/uploads/2015/07/about_title.jpg");
-    background-size: cover;
-    border: solid 0.5px #86CBDD;
     text-align: center;
 }
 
@@ -143,24 +122,24 @@ hr {
 
 .add-product-card {
     margin: 4% 20% 4% 20%;
-    border: solid 0.5px #86CBDD;
+    border: solid 0.5px #6ad1e3;
     padding: 2%;
 }
 
 .products-list {
-    border: solid 0.5px #86CBDD;
+    border: solid 0.5px #6ad1e3;
     margin: 3% 20% 3% 20%;
 }
 
 .btn {
     color: #ffffff;
-    background-color: #86CBDD;
+    background-color: #6ad1e3;
 }
 
 .btn:hover {
     color: #86CBDD;
     background-color: #ffffff;
-    border: solid 0.5px #86CBDD;
+    border: solid 0.5px #6ad1e3;
 }
 
 h4 {
@@ -176,7 +155,18 @@ h4 {
 }
 
 .about-card {
-    border: solid 0.5px #86CBDD;
+    border: solid 0.5px #6ad1e3;
     padding: 3% 2% 3% 2%;
     margin: 5% 20% 5% 20%;
 }
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
+    }
+
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
+    }   
+}
+

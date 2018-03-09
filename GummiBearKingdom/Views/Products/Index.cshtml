@@ -4,20 +4,26 @@
     ViewData["Title"] = "Products";
 }
 
-<div id="products-banner">
-    <h1 id="products-title">PRODUCTS</h1>
+<div class="banner">
+    <h1 class="title">PRODUCTS</h1>
 </div>
 
 <p class="add-product-link">@Html.ActionLink("Add New Product", "Create")</p>
 
-
-@foreach(var product in Model)
-{
-    <div class="card text-center products-list">
-        <div class="card-block">
-            <h4 class="card-title">@Html.ActionLink((string)product.Name, "Details", new{ productId = product.ProductId })</h4>
-		    <p>Made in @Html.DisplayFor(model => product.Country.Name)</p>
-	    </div>
+<div class="list-area">
+    <div class="card-columns">
+        @foreach (var product in Model)
+        {
+            <div class="card list-card">
+                <div class="card-body list">
+                    <h5 class="card-title">@Html.ActionLink((string)product.Name, "Details", new { productId = product.ProductId }, new { @class = "list-names" })</h5>
+                    <p>Made in @Html.DisplayFor(model => product.Country.Name)</p>
+                </div>
+            </div>
+        }
     </div>
-}
+</div>
+
+
+
 

@@ -4,8 +4,8 @@
     ViewData["Title"] = "Edit Product";
 }
 
-<div class="edit-banner">
-    <h1 class="edit-title">EDIT @Html.DisplayFor(model => model.Name)</h1>
+<div class="banner">
+    <h1 class="title">EDIT @Html.DisplayFor(model => model.Name)</h1>
 </div> 
 
 <p class="back">@Html.ActionLink("Back", "Details", new{productId = Model.ProductId})</p>
@@ -27,7 +27,7 @@
 		    <div class="form-group row">
                 <label class="col-md-3">@Html.DisplayNameFor(model => model.Description):</label>
                 <div class="col-md-9">
-                    @Html.TextAreaFor(model => model.Description, new{rows="10", cols="95"})
+                    @Html.TextAreaFor(model => model.Description, new{rows="10", @class = "form-control"})
                 </div>
             </div>
 		
@@ -41,11 +41,11 @@
 		    <div class="form-group row">
                 <label class="col-md-3">Country of Origin:</label>
                 <div class="col-md-9">
-                    @Html.DropDownList("CountryId")
+                    @Html.DropDownListFor(model => model.CountryId, (SelectList)ViewBag.ListOfCountries, new { @class = "form-control" })
                 </div>
             </div>
 		
-		    <input type="submit" value="Update" class="btn btn-default" /> 
+		    <input type="submit" value="Save" class="btn btn-default" /> 
 	    </div>
     </div> 
 }

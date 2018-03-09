@@ -3,18 +3,22 @@
 @{
     ViewData["Title"] = "Country Details";
 }
-<div id="country-detail-banner">
-    <h1 id="country-detail-title">Products Made in @Html.DisplayFor(model => model.Name)</h1>
+<div class="banner">
+    <h1 class="title">Products Made in @Html.DisplayFor(model => model.Name)</h1>
 </div>
 
 <p class="crud">@Html.ActionLink("Edit", "Edit", new{ countryId = Model.CountryId }) | @Html.ActionLink("Delete", "Delete", new{ countryId = Model.CountryId }) | @Html.ActionLink("Add", "AddProduct", "Products", new { countryId = Model.CountryId })</p>
 <p class="back">@Html.ActionLink("Back to Countries List", "Index")</p>
 
-<div class="card country-detail-card">
-    <div class="card-block">
+<div class="list-area">
+    <div class="card-columns">
         @foreach(var product in Model.Products)
         {
-            <p class="card-text country-products">@Html.ActionLink((string)product.Name, "Details", "Products", new{ productId = product.ProductId }, new { @id="country-detail-list"})</p>
+            <div class="card list-card">
+                <div class="card-body list">
+                    <h5 class="card-title">@Html.ActionLink((string)product.Name, "Details", "Products", new { productId = product.ProductId }, new { @class = "list-names" })</h5>
+                </div>
+            </div>
         }
     </div>
 </div>  
