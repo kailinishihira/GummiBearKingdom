@@ -11,10 +11,10 @@ namespace GummiBearKingdom.Models
     {
         [Key]
         public int CountryId { get; set; }
+        
         [Required]
         public string Name { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
-
     }
 }
