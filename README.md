@@ -2,7 +2,7 @@
 
 ### Kaili Nishihira
 
-#### _This a mock webpage about Gummi Bear Kingdom's products, 10.13.17_
+#### _This is a mock webpage about Gummi Bear Kingdom's products, 10.13.17_
 
 
 ## Description
